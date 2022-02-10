@@ -1,0 +1,120 @@
+
+@import url('https://fonts.googleapis.com/css?family=Orbitron&display=swap');
+
+*::before,
+*::after {
+  padding: 0;
+  margin: 0px;
+}
+
+label {
+  /*Taille police de description champs d'écriture*/
+  font-size: 20px;
+}
+
+/*Placement élément sur la page*/
+.absolu{position: absolute;}
+.relative{position: relative;}
+
+.hauta{top: 600px;}
+.gauchea{left: 13px;}
+.bas{bottom: 0px;}
+.centre{text-align: center;}
+
+.hautr{top: 645px;}
+.gaucher{left: 13px;}
+
+
+.hautc{top: 710px;}
+.gauchec{left: 120px;}
+
+.a {
+  
+  text-align:center
+  
+  } 
+
+h1 {
+  margin: 15px;
+}
+
+
+/*Paramètres/Style bouton*/
+button {
+  /*Hauteur boutons*/
+  padding: 7px;
+  /*Bord bouton*/
+  border: none;
+  /*Taille Police*/
+  font-size: 25px;
+  transition: 0.5s ease-in-out;
+}
+
+form button {
+/*Bouton confirmé*/
+  /*Couleur bouton*/
+  background: rgb(25, 163, 255);
+  /*Largeur bouton*/
+  width: 120px;
+  /*Couleur police*/
+  color: white;
+  margin: 5px;
+  }
+
+form {
+  /*Hauteur bouton*/
+  height: 50px;
+  padding: 0;
+  max-width: none;
+  margin: 5px;
+}
+
+input {
+  transition: 0.5s ease-in-out;
+  margin: 10px 0;
+  font-size: 20px;
+  padding: 1px;
+  /*Couleur police d'écriture dans le champs et contour au moment du clic*/
+  color: rgb(255, 255, 255);
+  /*Hauteur champs d'écriture */
+  padding: 0px;
+  background: rgba(255, 255, 255, 0.11);
+  border: none;
+}
+
+label {
+  font-size: 25px;
+}
+
+/*Position centrer*/
+footer {
+  position: fixed;
+  bottom: 25px;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+/*Position horizontale éléments du bas*/
+footer {
+  width: 100%;
+}
+
+/*Présentation de page*/
+@media screen and (min-width: 768px) {
+  body {
+    display: grid;
+    grid-template-areas:
+      "head head"
+      "clock form"
+      "btns ji";
+  }
+}
+
+@media screen and (max-width: 375px) {
+  form {
+    height: 40%;
+  }
+  footer {
+    position: static;
+  }
+}

@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron&display=swap');
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+
+  box-sizing: border-box;
+}
+
+body {
+  height: none;
+  padding: none;
+
+  background: rgb(243, 243, 243);
+  color: #131313;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  grid-area: head;
+
+  align-self: center;
+}
+
+h1 {
+  margin: 15px 0;
+  font-weight: 900;
+  font-size: 28px;
+  text-align: center;
+}
+
+input {
+  /*Fondu du conteur au moment du clic*/ 
+  transition: 0.5s ease-in-out;
+  /*Taille police*/
+  font-size: 18px;
+  /*Couleur police d'écriture dans le champs et contour au moment du clic*/
+  color: rgb(0, 0, 0);
+  /*Hauteur champs d'écriture */
+  padding: 3px;
+  /*Couleur champs d'écriture */
+  background: rgba(255, 255, 255);
+  /*Bord champs d'écriture */
+  border: none;
+}
+
+label {
+  /*Taille police de description champs d'écriture*/
+  font-size: 20px;
+}
+
+form {
+  align-self: none;
+  justify-self: left;
+  grid-area: form;
+  /*Largeur champs d'écriture*/
+  width: 12%;
+  justify-content: space-around;
+}
+
+form {
+  /*Marge champs d'écriture*/
+  height: 15%;
+  display: flex;
+  flex-direction: column;
+  padding: 1;
+  max-width: 450px;
+  /*Marge boutons comparé à gauche*/
+  margin: auto;
+}
+
+/*Marge et espace des boutons*/
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: none;
+  margin: none;
+}
+/*Paramètres bouton*/
+button {
+  /*Espace entre les boutons*/
+  margin: 20px;
+  /*Hauteur boutons*/
+  padding: 10px;
+  /*Bord bouton*/
+  border: none;
+  /*Taille Police*/
+  font-size: 18px;
+  transition: 0.5s ease-in-out;
+  position: relative;
+  text-align: center;
+}
+
+form button {
+/*Bouton confirmé*/
+  /*Couleur bouton*/
+  background: rgb(25, 163, 255);
+  /*Largeur bouton*/
+  width: 100%;
+  /*Marge autour boutons*/
+  margin: 15px 0;
+  /*Couleur police*/
+  color: white;
+}
+
+/*Bouton lancer*/
+.start {
+  /*Couleur bouton*/
+  background: #04AA6D;
+  /*Couleur police*/
+  color: white;
+}
+
+.break {
+  background: rgb(73, 199, 0);
+  color: #000000;
+}
+/*Bouton réinitialiser*/
+.reset {
+  /*Couleur bouton*/
+  background: rgb(201, 0, 0);
+  /*Couleur police*/
+  color: #000000;
+}
+/*Bouton pause*/
+.pause {
+  /*Couleur bouton*/
+  background: rgb(231, 128, 11);
+  /*Couleur police*/
+  color: #000000;
+}
+/*Bouton reprendre*/
+.resume {
+  /*Couleur bouton*/
+  background: rgb(214, 214, 214);
+  /*Couleur police*/
+  color: rgb(0, 0, 0);
+}
+/*Chrono*/
+.clock {
+  padding: none;
+  display: flex;
+  position: relative;
+  /*Position chrono*/
+  justify-content: center;
+  align-items: center;
+  /*Police d'écriture*/
+  font-weight: bold;
+  /*Largeur*/
+  height: 30%;
+  /*Taille*/
+  font-size: 250px;
+}
+.btn-group {
+  grid-area: btns;
+  /*Position justifier des boutons comparé au chrono*/
+  justify-content: center;
+}
+.clock {
+  grid-area: clock;
+  /*Position du chrono*/
+  height: 100%;
+}
+
+/*Position centrer*/
+footer {
+  position: fixed;
+  bottom: 25px;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+/*Position horizontale éléments du bas*/
+footer {
+  width: 100%;
+  }
+
+/*Présentation de page*/
+@media screen and (min-width: 768px) {
+  body {
+    display: grid;
+    grid-template-areas:
+      "head head"
+      "clock form"
+      "btns ji";
+  }
+}
+
+@media screen and (max-width: 375px) {
+  form {
+    height: 40%;
+  }
+  footer {
+    position: static;
+  }
+}
+
+/*Position cercle
+.progress-ring {
+  position: absolute;
+  top: 50%;
+  left: 00%;
+  transform: translate(-50%, -50%);
+}
+/*Paramètres cercle
+.progress-ring__circle {
+  transition: 0.5s;
+  transform: rotate(-90deg);
+  transform-origin: 80% 80%;
+  /*Couleur cercle
+  stroke: rgb(243, 243, 243);
+}
+
+/*Pulsation cercle
+.danger {
+  stroke: rgb(243, 17, 28);
+  animation: pulse 0.9s ease-in-out infinite;
+}
+/*Zoom dezoom du cercle
+@keyframes pulse {
+  0%,
+  100% {
+    transform: rotate(-90deg) scale(1);
+  }
+  50% {
+    transform: rotate(-90deg) scale(1.05);
+  }
+  75% {
+    transform: rotate(-90deg) scale(0.8);
+  }
+}
+
+/*----------------------*/
+
+body {
+  background: #8b9da9;
+}
+/*Placement élément sur la page*/
+.absolu{position: absolute;}
+.relative{position: relative;}
+
+.haut{top: -50px;}
+.bas{bottom: 20px;}
+.gauche{left: 10px;}
+
+/*Animation d'arrivé*/
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes lightSpeedIn {
+  100% {
+  transform: translateY(0%);
+  opacity: 1;
+}
+  0% {
+    transform: translateY(100%);
+    opacity: 1;
+  }
+}
+
+.lightSpeedIn {
+  -webkit-animation-name: lightSpeedIn;
+  animation-name: lightSpeedIn;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+.wrapper {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+
+/*Police écriture*/
+h1 { 
+  /*Marge autour du texte*/
+  padding: 20px;
+  /*Police*/
+  font-family: ‘Metrophobic’, Arial, serif; 
+  /*Largeur police*/
+  font-weight: 600;
+  /*Taille police écriture*/
+  font-size: 2.5em;
+  /*Couleur police écriture*/
+  color: rgb(255, 0, 0);
+}
+
+/*Police d'écriture bouton*/
+.btn {
+  /*Espace entre les boutons*/
+  margin: 1rem;
+  
+  cursor: pointer;
+  overflow: visible;
+  /*Surligner, barré, etc...*/
+  text-decoration: none;
+  /*Police*/
+  font-family: Arial, serif;
+  /*Largeur police*/
+	font-weight: 400;
+  /*Taille police écriture*/
+  font-size: 20px;
+  /*Paramètres Bouton 1*/
+	transition: all 400ms ease-in-out;
+  /*Couleur police d'écriture*/
+  color: rgb(0, 255, 149);
+}
+
+/*Style du bouton*/
+.btn.btn-bg-transparent {
+  /*Haut Largeur Bas*/
+  padding: 1em 2em 1em;
+  /*Fond Bouton*/
+	background: blue;
+  /*Bord*/
+	border: 2px solid rgb(21, 255, 0);
+  /*Arrondi Angle*/
+  border-radius: 6px;
+
+  line-height: 1;
+}
+
+/*Style carré avec souris dessus*/
+.btn.btn-bg-transparent:hover {
+  border: 1px solid #ff00ff;
+  /*Couleur police d'écriture*/
+  color: #00eeff;
+  
+	background: #ffffff;
+  /*Fond dégradé avec souris dessus*/
+  background: linear-gradient(-45deg, #362e21 0%, #ffa600 47%, #ffffff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0000', endColorstr='#ff0000',GradientType=1 );
+	transform: scale(1.2);
+}
+
+/*Paramètres Bouton 2*/
+.btn.btn-bg-color {
+  /*Haut Largeur Bas*/
+  padding: 1em 2em 1em;
+  /*Bord*/
+	border: 2px solid #ff0000;
+  /*Arrondi Angle*/
+	border-radius:6px;
+	  
+	line-height: 1;
+  /*Couleur police d'écriture*/
+  color: #00ff37;
+
+  background: #ffffff;
+  /*Fond dégradé*/
+	background: linear-gradient(-45deg, #ffffff 0%, #ff0000 47%, #8c00ff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ecf0f1', endColorstr='#ededed',GradientType=1 );  
+}
+/*Style carré avec souris dessus*/
+.btn.btn-bg-color:hover {
+   /*Fond Bouton*/
+	background: transparent;
+  /*Bord*/
+ 	border: 2px solid rgb(0, 17, 255);
+  /*Couleur police d'écriture*/
+ 	color: rgb(247, 0, 255);
+
+	transform: scale(1.2);
+}
